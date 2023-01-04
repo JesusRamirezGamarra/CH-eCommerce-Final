@@ -1,0 +1,161 @@
+<section class="bg-white dark:bg-gray-900" >    
+    <div class="py-8 lg:py-4 px-4 mx-auto max-w-md">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">CHECKOUT</h2>
+        <h4 class="mb-4 text-sm tracking-tight text-center text-gray-900 dark:text-white">It's easy to pay in USD Dolar at checkout with extra save process.</h4> 
+    </div>  
+</section>
+    <hr>
+<div class="flex">
+    <div class="w-full h-full overflow-y-auto">
+    <div >
+        <main>
+        <section  class="bg-white dark:bg-gray-900" >
+            <div class="text-red-500 hover:text-red-800 relative z-0 text-center">
+                <div id="idMessage" ></div> 
+            </div>
+            <div class="px-4 mx-auto max-w-2xl">
+                <div >
+                    {{#each products.payload.data}}
+                    <div class="md:flex items-strech py-8 md:py-10 lg:py-0 border-t border-gray-50">
+                        <div class="md:w-5/12 2xl:w-1/4 w-full">
+                            <img src="{{product.thumbnail}}" alt="Black Leather Bag" class="W-full object-center object-cover md:block hidden" />
+                        </div>
+                        <div class="md:pl-3 md:w-7/12 2xl:w-3/4 flex flex-col justify-center pt-10 pb-10">
+                            <p class="text-xs leading-3 text-gray-800 dark:text-white md:pt-0 pt-4">SKU : {{product.sku}}</p>
+                            <div class="flex items-center justify-between w-full pt-1">
+                                <p class="text-base font-black leading-none text-gray-800 dark:text-white">{{product.name}}</p>
+                                <input id="{{product.id}}" value="{{quantity}}" type="number"  maxlength="2" size="10" min="1" max="{{product.stock}}" onkeydown ="if(this.value>={{product.stock}}) return false;" 
+                                onchange="let amount = parseInt(this.value); 
+                                if (amount < 1) { this.value = 1;   amount =1;  };
+                                if (amount > {{product.stock}}) {   this.value = {{product.stock}}; amount = {{product.stock}}; };
+                                document.getElementById('labelSubTotalAmount{{product._id}}').innerHTML = `${amount}`;
+                                document.getElementById('labelProducto{{product._id}}').innerHTML = `${amount * {{product.price}} }`;
+                                document.getElementById('labelSubTotalProducto{{product._id}}').innerHTML = `${amount * {{product.price}} }`;
+                                sumar();
+                                save('{{product._id}}',amount);
+                                load();
+                                "                              
+                                class="block w-24 text-center  p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required></input>
+                            </div>
+                            <p class="text-xs leading-3 text-gray-600 dark:text-white pt-2"><b>Stock :</b> {{product.stock}} Unid.</p>
+                            <p class="text-xs leading-3 text-gray-600 dark:text-white py-4"><b>Price :</b> $ {{product.price}} </p>
+                            <p class="w-96 text-xs leading-3 text-gray-600 dark:text-white">{{product.description}}</p>
+                            <div class="flex items-center justify-between pt-5">
+                                <div class="flex">
+                                    <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500" data-id="{{product._id}}"  onclick="deleteProduct(this)" >Remove</button>
+                                </div>                                
+                                <label id="labelProducto{{product._id}}"  class="text-base font-black leading-none text-gray-800 dark:text-white">$ {{subtotal quantity product.price}}  </label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    {{/each}}                  
+                </div>
+            </div>
+        </section>
+        </main>
+    </div>
+    </div>      
+<div class="flex flex-col w-96 h-screen py-20 ">
+    <div class="content-center">
+            <div class="pointer-events-none inset-y-0 right-0 flex max-w-full pl-10">
+                <div class="pointer-events-auto w-screen max-w-md ">
+                    <div class="flex h-full flex-col bg-white shadow-xl">
+                        <div class="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
+                            <div class="flex items-start justify-between">
+                                <h2 class="text-lg font-medium text-gray-900" id="slide-over-title"><b>Shopping cart</b></h2>
+                            </div>
+                            <div class="mt-8">
+                                <div class="flow-root">
+                                    <ul role="list" class="-my-6 divide-y divide-gray-200">
+
+                                    {{#each products.payload.data}}  
+                                    <form id="productForm" class="form" role="form" autocomplete="off">
+                                        <li class="flex py-6">
+                                            <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                            <img src="{{product.thumbnail}}" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="h-full w-full object-cover object-center">
+                                            </div>
+                                            <div class="ml-4 flex flex-1 flex-col">
+                                                <div>
+                                                    <div class="flex justify-between text-base font-medium text-gray-900">
+                                                        <h3>
+                                                            <a href="#">{{product.name}}</a>
+                                                        </h3>
+                                                        <div class="flex">$<label id="labelSubTotalProducto{{product._id}}" class="montoProducto ml-4"> {{subtotal quantity product.price}} </label></div>
+                                                    </div>
+                                                    {{!-- <p class="mt-1 text-sm text-gray-500">Salmon</p> --}}
+                                                </div>
+                                                <div class="flex flex-1 items-end justify-between text-sm">
+                                                    <div>
+                                                        <label>Amount :  </label>
+                                                        <label id="labelSubTotalAmount{{product._id}}" class="text-gray-500">{{quantity}}</label>
+                                                    </div>
+                                                    <div class="flex">
+                                                        <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500" 
+                                                        data-id="{{product._id}}"  
+                                                        onclick="deleteProduct(this)">Remove</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </form>
+                                    {{/each }}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t border-gray-200 py-6 px-4 sm:px-6">
+                            <div class="flex justify-between text-base font-medium text-gray-900">
+                            <p>Subtotal</p>
+                            <p>$  <label id="total">{{products.payload.total}}</label></p>
+                            </div>
+                            <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                            <div class="mt-6">
+                                <a class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 cursor-pointer " onclick="checkout()" >Checkout</a>                                                
+                            </div>
+                            <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
+                            <p>
+                                or&nbsp;&nbsp; 
+                                    <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500" onclick="location.href='/'" >
+                                        Continue Shopping
+                                    <span aria-hidden="true"> &rarr;</span>
+                                    </button>
+                                
+                            </p>
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>      
+        </div>      
+    </div>
+</div>
+    <style>
+        /* width */
+        #scroll::-webkit-scrollbar {
+            {{!-- width: 1px; --}}
+            display: none;
+        }
+{{!-- 
+        /* Track */
+        #scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        #scroll::-webkit-scrollbar-thumb {
+            background: rgb(133, 132, 132);
+        } --}}
+
+    </style>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/checkout.js"></script>
+{{!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> --}}    
+
+
+
+
+
+

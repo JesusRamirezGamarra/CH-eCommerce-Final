@@ -1,0 +1,62 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**"                
+            ],
+            // "program": "${file}/src/app.js",
+            "program": "${workspaceFolder}/src/app.js",
+            "env":{
+                // "DEBUG":"true",
+                // mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
+                // "MONGO_URL":"mongodb+srv://coderhouse:Mishina2000@coderhouse-cluster-ljrg.qaohzev.mongodb.net/CoderHouse-eCommerce?retryWrites=true&w=majority",
+                //  MONGOATLAS= mongodb+srv://admin:admin@cluster0.2t9dj.mongodb.net/Cluster0?retryWrites=true&w=majority
+                // DATA
+                "MONGODB_USER":"coderhouse",
+                "MONGODB_PASSWORD":"Mishina2000",
+                "MONGODB_CLUSTER":"coderhouse-cluster-ljrg.qaohzev.mongodb.net",
+                "MONGODB_DATABASE":"CoderHouse-eCommerce",
+                "MONGODB_OPTIONS":"retryWrites=true&w=majority",
+                // SESSION
+                "SESSION_USER":"coderhouse",
+                "SESSION_PASSWORD":"Mishina2000",
+                "SESSION_CLUSTER":"coderhouse-cluster-ljrg.qaohzev.mongodb.net",
+                "SESSION_DATABASE":"CoderHouse-eCommerce",
+                "SESSION_OPTIONS":"retryWrites=true&w=majority",
+
+                "NODEMAILER_SERVICE":"gmail",
+                "NODEMAILER_HOST":"",
+                "NODEMAILER_PORT":"587",
+                "NODEMAILER_USER":"luciojesusramirezgamarra@gmail.com",
+                "NODEMAILER_PASSWORD":"pbwxaxpxxmqpbciz",
+                "SESSION_SECRET": "SECRETO@@@",
+
+                "ADMIN_CONTACT_EMAIL_ALIAS":"Admin",
+                "ADMIN_CONTACT_EMAIL":"luciojesusramirezgamarra@gmail.com",
+                "PERSISTENCE":"mongodb",
+                "NOTFOUND_THUMBNAIL": "./img/notFound404.png",
+                "JWT_SECRET":"637701c02e8b44a5502a9daa",
+                "JWT_COOKIE":"CODER_SHOP",
+
+                "SAC_CONTACT_EMAIL":"lramire2@tulane.edu",
+                "SAC_CONTACT_EMAIL_ALIAS":"Team Coder Shop",
+
+                "SMS_ACCOUNT":"AC389f5ef1ebfae5e4997a3ae9513fab16",
+                "SMS_TOKEN":"991e0d874f387acbd88d4d6d17e7134e",
+                "SMS_PHONE_NUMBER":"+17432025424",
+                "WHATSAPP_ACCOUNT":"AC389f5ef1ebfae5e4997a3ae9513fab16",
+                "WHATSAPP_TOKEN":"991e0d874f387acbd88d4d6d17e7134e",
+                "WHATSAPP_PHONE_NUMBER":"+14155238886",
+                "ADMIN_CONTACT_PHONE" :"+51978111558",
+            }
+        }
+    ]
+}

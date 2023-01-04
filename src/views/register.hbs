@@ -1,0 +1,74 @@
+<main>
+    <section class="pb-8">
+        <section class="bg-white dark:bg-gray-900 pb-20" >    
+            <div class="py-8 lg:py-16 px-4 mx-auto max-w-lg">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Create account</h2>
+                <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-sm ">
+                        By creating an account, you agree to Coder eCommerce Conditions of Use and Privacy Notice.
+                </p>   
+                <form id="registerForm" class="form" role="form" autocomplete="off">
+                    <div>
+                        <label for="firstname"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your first name *</label>
+                        <input id="firstname" name='firstname' type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="enter your first name" required>
+                    </div>
+                    <div>
+                        <label for="lastname"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your last name *</label>
+                        <input id="lastname" name='lastname' type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="enter your last name" required>
+                    </div>
+                    <div>
+                        <label for="imageurl"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Avatar *</label>
+                        <input id="imageurl" name='imageurl' type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="enter your Avatar" required>                
+                    </div>
+                    <div>
+                        <label for="phonenumber"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Phone [ cell phone ] *</label>
+                        <input id="phonenumber" name='phonenumber' type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="enter your Phone" required>                
+                    </div>
+                    <div>
+                        <span class="mb-6 w-full group flex justify-end pt-2 text-right mb-3 d-flex justify-content-center">must include the country code e.g USA +1 585 282 6780 .</span>
+                    </div>
+                    <div>
+                        <label for="username"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Username [ email ] *</label>
+                        <input id="username" name='username' type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="enter your email" required>                
+                    </div>
+                    <div>
+                        <label for="password"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Password *</label>
+                        <input id="password" name='password' type="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="enter your password" required>    
+                    </div>
+                    <div>
+                        <label for="repassword"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Re-emter Password *</label>
+                        <input id="repassword" name='repassword' type="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="enter your password confirmation" required>                     
+                    </div>
+                    <div>
+                        <span class="mb-6 w-full group flex justify-end pt-2 text-right mb-3 d-flex justify-content-center">Passwords must be at least 6 characters.</span>
+                    </div>
+                    <div>
+                        <span class="mb-6 w-full group flex justify-end pt-2 text-right mb-3 d-flex justify-content-center">* Campos Obligatorios.</span>
+                    </div>                    
+                    <div class="text-red-500 hover:text-red-800 relative z-0 text-center">
+                        <div id="idMessage" ></div> 
+                    </div>
+
+                    <div class="relative z-0 mb-6 w-full group flex justify-center">
+                        <button
+                            type="submit"
+                            class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
+                            data-mdb-ripple="true"
+                            data-mdb-ripple-color="light"
+                        >
+                            CONTINUE
+                        </button>
+                    </div>
+                </form>
+                <hr>
+                <div>
+                    Already have an account? Sign in
+                </div>
+                <div>
+                    Buying for work? Create a free business account
+                </div>
+            </div>
+        </section>
+    </section>            
+    <script src="/js/main.js" defer></script>
+    <script src="./js/register.js" defer></script>
+</main>

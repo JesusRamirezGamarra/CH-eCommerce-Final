@@ -1,0 +1,50 @@
+{
+  "name": "ch-ecommerce-intermediate",
+  "version": "1.0.0",
+  "description": "eCommerce - Intermediate",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/app.js -e=PROD -m=FORK",
+    "DEV": "nodemon ./src/app.js -e=PROD -m=FORK",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesusRamirezGamarra/CH-Backend-Intermediate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JesusRamirezGamarra/CH-Backend-Intermediate/issues"
+  },
+  "homepage": "https://github.com/JesusRamirezGamarra/CH-Backend-Intermediate#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "minimist": "^1.2.7",
+    "moment": "^2.29.4",
+    "mongoose": "^6.3.5",
+    "nodemailer": "^6.8.0",
+    "nodemon": "^2.0.20",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "pino": "^8.7.0",
+    "socket.io": "^4.5.3",
+    "twilio": "^3.83.3",
+    "uuid": "^9.0.0",
+    "vm": "^0.1.0",
+    "winston": "^3.8.2"
+  }
+}

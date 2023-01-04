@@ -1,0 +1,2959 @@
+{
+	"info": {
+		"_postman_id": "b3189a01-0ff0-48ea-bee0-388724f5d0c1",
+		"name": "PROYECTO FINAL",
+		"description": "Backend Excersise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20336046"
+	},
+	"item": [
+		{
+			"name": "PRODUCTS",
+			"item": [
+				{
+					"name": "All products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "316"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13c-mCWXecg57VRPgGEuFiT2it3l5Cw\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 01:27:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"631e027278e5541cf40657a8\",\n            \"name\": \"Cuaderno\",\n            \"price\": 300,\n            \"description\": \"A3- hojas cuadriculadas\",\n            \"category\": \"631291d2e9bd0194c2022c6c\",\n            \"img\": \"https://cdn2.iconfinder.com/data/icons/pinpoint-interface/48/product-256.png\",\n            \"createdAt\": \"2022-09-11T15:44:50.799Z\",\n            \"updatedAt\": \"2022-09-11T15:44:50.799Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Post a product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Cuaderno\",\r\n    \"price\": 300,\r\n    \"description\": \"A3- hojas cuadriculadas\",\r\n    \"category\":\"631291d2e9bd0194c2022c6c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Lapiz\",\r\n    \"price\": 100,\r\n    \"description\": \"Lapiz de dibujo\",\r\n    \"category\":\"631291d2e9bd0194c2022c6c\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "340"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"154-6D3vUIZM/hYowwr33W4bOTXmKas\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 01:46:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Product created successfully\",\n    \"data\": {\n        \"name\": \"Lapiz\",\n        \"price\": 100,\n        \"description\": \"Lapiz de dibujo\",\n        \"category\": \"631291d2e9bd0194c2022c6c\",\n        \"img\": \"https://cdn2.iconfinder.com/data/icons/pinpoint-interface/48/product-256.png\",\n        \"_id\": \"631e8f89ef0ddc800039d13d\",\n        \"createdAt\": \"2022-09-12T01:46:49.462Z\",\n        \"updatedAt\": \"2022-09-12T01:46:49.462Z\"\n    }\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"price\": 100,\r\n    \"description\": \"Lapiz de dibujo\",\r\n    \"category\":\"631291d2e9bd0194c2022c6c\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "97"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"61-SmOmFlSqxEEdmlRLoolPse/1uNQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 01:47:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"API ERROR occurred when trying to create a product in the DB\",\n    \"error\": {\n        \"statusCode\": 400\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get product  ( with ProductId )",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/products/631e027278e5541cf40657a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"products",
+								"631e027278e5541cf40657a8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/products/631e027278e5541cf40657a8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"products",
+										"631e027278e5541cf40657a8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "314"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13a-QZNCJl1xvoZQCGLhxa72juOjUgU\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 01:48:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"631e027278e5541cf40657a8\",\n        \"name\": \"Cuaderno\",\n        \"price\": 300,\n        \"description\": \"A3- hojas cuadriculadas\",\n        \"category\": \"631291d2e9bd0194c2022c6c\",\n        \"img\": \"https://cdn2.iconfinder.com/data/icons/pinpoint-interface/48/product-256.png\",\n        \"createdAt\": \"2022-09-11T15:44:50.799Z\",\n        \"updatedAt\": \"2022-09-11T15:44:50.799Z\"\n    }\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/products/631e027278e5541cf4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"products",
+										"631e027278e5541cf4"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "356"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"164-geS2GP25rePsrdkkKdc4d5Xu3fM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 01:48:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"API ERROR occurred when trying to read the products from the DB\",\n    \"error\": {\n        \"stringValue\": \"\\\"631e027278e5541cf4\\\"\",\n        \"valueType\": \"string\",\n        \"kind\": \"ObjectId\",\n        \"value\": \"631e027278e5541cf4\",\n        \"path\": \"_id\",\n        \"reason\": {},\n        \"name\": \"CastError\",\n        \"message\": \"Cast to ObjectId failed for value \\\"631e027278e5541cf4\\\" (type string) at path \\\"_id\\\" for model \\\"products\\\"\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit a product  ( with ProductId )",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Cuadernillo\",\r\n    \"price\": 5000,\r\n    \"description\": \"A3- hojas cuadriculadas\",\r\n    \"category\":\"631291d2e9bd0194c2022c6c\",\r\n    \"img\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-256.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/products/631e027278e5541cf40657a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"products",
+								"631e027278e5541cf40657a8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Cuadernillo\",\r\n    \"price\": 5000,\r\n    \"description\": \"A3- hojas cuadriculadas\",\r\n    \"category\":\"631291d2e9bd0194c2022c6c\",\r\n    \"img\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-256.png\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/products/631e027278e5541cf40657a8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"products",
+										"631e027278e5541cf40657a8"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "365"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16d-7T3d8wmeZLi/t7iI19Z5asQZ2tM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 01:49:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Product updated successfully\",\n    \"data\": {\n        \"_id\": \"631e027278e5541cf40657a8\",\n        \"name\": \"Cuadernillo\",\n        \"price\": 5000,\n        \"description\": \"A3- hojas cuadriculadas\",\n        \"category\": \"631291d2e9bd0194c2022c6c\",\n        \"img\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-256.png\",\n        \"createdAt\": \"2022-09-11T15:44:50.799Z\",\n        \"updatedAt\": \"2022-09-12T01:49:22.989Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a product  ( with ProductId )",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/products/631e027278e5541cf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"products",
+								"631e027278e5541cf"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/products/631e027278e5541cf40657a8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"products",
+										"631e027278e5541cf40657a8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-/vwFSfHytktaaLGvdsppvqyM/3E\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 01:49:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Product deleted successfully\"\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/products/631e027278e5541cf",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"products",
+										"631e027278e5541cf"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "350"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15e-fc7fUGJSZoaPYygTRVQ3Sb0TbSA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 01:50:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"API ERROR occurred when trying to delete a product in the DB\",\n    \"error\": {\n        \"stringValue\": \"\\\"631e027278e5541cf\\\"\",\n        \"valueType\": \"string\",\n        \"kind\": \"ObjectId\",\n        \"value\": \"631e027278e5541cf\",\n        \"path\": \"_id\",\n        \"reason\": {},\n        \"name\": \"CastError\",\n        \"message\": \"Cast to ObjectId failed for value \\\"631e027278e5541cf\\\" (type string) at path \\\"_id\\\" for model \\\"products\\\"\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CATEGORIES",
+			"item": [
+				{
+					"name": "All categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/categories/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/categories/631388acd9b6a07d248330d6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories",
+										"631388acd9b6a07d248330d6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "175"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"af-vadWmPeYMvZSkjmM/Ibj6XUHQs8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 01:50:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"631388acd9b6a07d248330d6\",\n        \"name\": \"Libreria\",\n        \"description\": \"Productos Escolares\",\n        \"createdAt\": \"2022-09-03T17:02:36.234Z\",\n        \"updatedAt\": \"2022-09-03T17:02:36.234Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Post a category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ropa\",\r\n    \"description\": \"Ropa deportiva\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Ropa\",\r\n    \"description\": \"Ropa deportiva\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "204"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cc-z9Qx1dndXmfP9q6V0bfEap8pM9o\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 01:51:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Category created successfully\",\n    \"data\": {\n        \"name\": \"Ropa\",\n        \"description\": \"Ropa deportiva\",\n        \"_id\": \"631e9091ef0ddc800039d143\",\n        \"createdAt\": \"2022-09-12T01:51:13.049Z\",\n        \"updatedAt\": \"2022-09-12T01:51:13.049Z\"\n    }\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Ropa\",\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "919"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"397-qn+tCL+CqwwYwap9X9P2iOiQkFY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 01:51:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Unexpected token } in JSON at position 30\",\n    \"stack\": \"SyntaxError: Unexpected token } in JSON at position 30\\n    at JSON.parse (<anonymous>)\\n    at parse (C:\\\\Users\\\\noe_m\\\\Desktop\\\\ecommerce\\\\server\\\\node_modules\\\\body-parser\\\\lib\\\\types\\\\json.js:89:19)\\n    at C:\\\\Users\\\\noe_m\\\\Desktop\\\\ecommerce\\\\server\\\\node_modules\\\\body-parser\\\\lib\\\\read.js:128:18\\n    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)\\n    at invokeCallback (C:\\\\Users\\\\noe_m\\\\Desktop\\\\ecommerce\\\\server\\\\node_modules\\\\raw-body\\\\index.js:231:16)\\n    at done (C:\\\\Users\\\\noe_m\\\\Desktop\\\\ecommerce\\\\server\\\\node_modules\\\\raw-body\\\\index.js:220:7)\\n    at IncomingMessage.onEnd (C:\\\\Users\\\\noe_m\\\\Desktop\\\\ecommerce\\\\server\\\\node_modules\\\\raw-body\\\\index.js:280:7)\\n    at IncomingMessage.emit (node:events:539:35)\\n    at IncomingMessage.emit (node:domain:475:12)\\n    at endReadableNT (node:internal/streams/readable:1345:12)\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Category by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/categories/631388acd9b6a07d248330d6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"categories",
+								"631388acd9b6a07d248330d6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/categories/631388acd9b6a07d248330d6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories",
+										"631388acd9b6a07d248330d6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "175"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"af-vadWmPeYMvZSkjmM/Ibj6XUHQs8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 01:52:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"631388acd9b6a07d248330d6\",\n        \"name\": \"Libreria\",\n        \"description\": \"Productos Escolares\",\n        \"createdAt\": \"2022-09-03T17:02:36.234Z\",\n        \"updatedAt\": \"2022-09-03T17:02:36.234Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit a category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Indumentaria\",\r\n    \"description\": \"Ropa deportiva\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/categories/631e9091ef0ddc800039d143",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"categories",
+								"631e9091ef0ddc800039d143"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Indumentaria\",\r\n    \"description\": \"Ropa deportiva\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/categories/631e9091ef0ddc800039d143",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories",
+										"631e9091ef0ddc800039d143"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "212"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d4-daPNqjB3G2xZ+MtLjzLUSAQcy4M\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 01:53:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Category updated successfully\",\n    \"data\": {\n        \"_id\": \"631e9091ef0ddc800039d143\",\n        \"name\": \"Indumentaria\",\n        \"description\": \"Ropa deportiva\",\n        \"createdAt\": \"2022-09-12T01:51:13.049Z\",\n        \"updatedAt\": \"2022-09-12T01:53:09.659Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/categories/631e9091ef0ddc800039d143",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"categories",
+								"631e9091ef0ddc800039d143"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/categories/631e9091ef0ddc800039d143",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories",
+										"631e9091ef0ddc800039d143"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-SQiEbGMlKKsxfHE15NM8rqqNtxw\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 01:53:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Category deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "getAll Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "554"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22a-FHw40VQVyBiPVjp694CyybsLgBY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:31:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"users\": [\n        {\n            \"_id\": \"631e37285c91a9ed8c4c7eb4\",\n            \"name\": \"Admin\",\n            \"lastname\": \"Admin\",\n            \"phone\": 12222222,\n            \"email\": \"cid@123.com\",\n            \"password\": \"$2b$10$ZbS.yCHxgv39EFzz4SH53e0yjvn/5sjaPYLydZfwHHIuIlzGG./h.\",\n            \"admin\": true,\n            \"createdAt\": \"2022-09-11T19:29:44.731Z\",\n            \"updatedAt\": \"2022-09-11T19:29:44.731Z\"\n        },\n        {\n            \"_id\": \"631e694573fc67e31320235f\",\n            \"name\": \"Noe\",\n            \"lastname\": \"Cid\",\n            \"phone\": 12222222,\n            \"email\": \"noe@555.com\",\n            \"password\": \"$2b$10$BLbgkiTdOKKOGuOT7uI0auR8ft.q8bOyVkkhISXmEZnRE5yQlgpYK\",\n            \"admin\": false,\n            \"createdAt\": \"2022-09-11T23:03:33.968Z\",\n            \"updatedAt\": \"2022-09-11T23:03:33.968Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Signup User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"name\": \"Noe\",\r\n    \"lastname\": \"Cid\",\r\n    \"phone\": 12222222,\r\n    \"email\": \"noeCid@222.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"name\": \"Noe\",\r\n    \"lastname\": \"Cid\",\r\n    \"phone\": 12222222,\r\n    \"email\": \"noeCid@222.com\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/users/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"users",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "322"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"142-3lNIFMGT942SqmP9J2ByBo6nAd0\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:32:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"User created successfully\",\n    \"userCreated\": {\n        \"name\": \"Noe\",\n        \"lastname\": \"Cid\",\n        \"phone\": 12222222,\n        \"email\": \"noeCid@222.com\",\n        \"password\": \"$2b$10$KY31Gd0qCJR4TLpUblWeqeQB272Z.PngZz7Y5PpHgeAKoCvqWws.G\",\n        \"admin\": false,\n        \"_id\": \"631eb65c585b7f4284692df3\",\n        \"createdAt\": \"2022-09-12T04:32:28.390Z\",\n        \"updatedAt\": \"2022-09-12T04:32:28.390Z\"\n    }\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"name\": \"Noe\",\r\n    \"lastname\": \"Cid\",\r\n    \"phone\": 12222222,\r\n    \"email\": \"noeCid@222.com\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/users/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"users",
+										"signup"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "163"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a3-9nj8A+HKqB9I321RNhYnfyDcBMA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:32:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"API ERROR occurred when trying to create a user in the DB\",\n    \"error\": {\n        \"index\": 0,\n        \"code\": 11000,\n        \"keyPattern\": {\n            \"email\": 1\n        },\n        \"keyValue\": {\n            \"email\": \"noeCid@222.com\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"email\": \"noe@555.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"email\": \"noe@555.com\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/users/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "x-auth-token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzFlNjk0NTczZmM2N2UzMTMyMDIzNWYiLCJsYXN0bmFtZSI6IkNpZCIsImFkbWluIjpmYWxzZSwiaWF0IjoxNjYyOTU3MjgwLCJleHAiOjE2NjI5NjA4ODB9.MMvYHC6PKWZKgd1VkhiTKk46eudpqaFbNff3kopw2T0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "246"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f6-WO6Eltb0+QZRFiPQoPgFmKcQtcI\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:34:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"login OK\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzFlNjk0NTczZmM2N2UzMTMyMDIzNWYiLCJsYXN0bmFtZSI6IkNpZCIsImFkbWluIjpmYWxzZSwiaWF0IjoxNjYyOTU3MjgwLCJleHAiOjE2NjI5NjA4ODB9.MMvYHC6PKWZKgd1VkhiTKk46eudpqaFbNff3kopw2T0\"\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"email\": \"noe@555\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/users/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-FwGXbVlFGoM/1Z0c1KNGfqAaVY4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:42:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"API ERROR occurred when trying to find a user in the DB\",\n    \"error\": {\n        \"statusCode\": 404\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "User by id  ( with UserId )",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/users/631e694573fc67e31320235f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"631e694573fc67e31320235f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/users/631e694573fc67e31320235f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"users",
+										"631e694573fc67e31320235f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "279"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"117-fv+7zK/dg1eJ+gCcxXy7U5c8g0w\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:42:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"users\": {\n        \"_id\": \"631e694573fc67e31320235f\",\n        \"name\": \"Noe\",\n        \"lastname\": \"Cid\",\n        \"phone\": 12222222,\n        \"email\": \"noe@555.com\",\n        \"password\": \"$2b$10$BLbgkiTdOKKOGuOT7uI0auR8ft.q8bOyVkkhISXmEZnRE5yQlgpYK\",\n        \"admin\": false,\n        \"createdAt\": \"2022-09-11T23:03:33.968Z\",\n        \"updatedAt\": \"2022-09-11T23:03:33.968Z\"\n    }\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/users/631e694573fc67e3132",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"users",
+										"631e694573fc67e3132"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "353"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"161-OrCjVQ13Us/r/d94wdQ2fApVrkQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:43:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"API ERROR occurred when trying to read the users from the DB\",\n    \"error\": {\n        \"stringValue\": \"\\\"631e694573fc67e3132\\\"\",\n        \"valueType\": \"string\",\n        \"kind\": \"ObjectId\",\n        \"value\": \"631e694573fc67e3132\",\n        \"path\": \"_id\",\n        \"reason\": {},\n        \"name\": \"CastError\",\n        \"message\": \"Cast to ObjectId failed for value \\\"631e694573fc67e3132\\\" (type string) at path \\\"_id\\\" for model \\\"users\\\"\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit a user  ( with UserId )",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"name\": \"nameEdited\",\r\n    \"lastname\": \"user\",\r\n    \"phone\": 12222222,\r\n    \"email\": \"noe@50.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/631e694573fc67e31320235f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"631e694573fc67e31320235f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"name\": \"nameEdited\",\r\n    \"lastname\": \"user\",\r\n    \"phone\": 12222222,\r\n    \"email\": \"noe@50.com\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/users/631e694573fc67e31320235f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"users",
+										"631e694573fc67e31320235f"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "267"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10b-+ZcHZSADiNgPupjO7cQFUlwaT6I\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:43:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"User updated successfully\",\n    \"data\": {\n        \"_id\": \"631e694573fc67e31320235f\",\n        \"name\": \"nameEdited\",\n        \"lastname\": \"user\",\n        \"phone\": 12222222,\n        \"email\": \"noe@50.com\",\n        \"password\": \"password\",\n        \"admin\": false,\n        \"createdAt\": \"2022-09-11T23:03:33.968Z\",\n        \"updatedAt\": \"2022-09-12T04:43:53.456Z\"\n    }\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"name\": \"nameEdited\",\r\n    \"lastname\": \"user\",\r\n    \"phone\": 12222222,\r\n    \"email\": \"noe@50.com\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/users/631e694573fc67e31320",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"users",
+										"631e694573fc67e31320"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "353"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"161-dnm54G7Zv0KuNBkdwwNlbs5ytxg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:44:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"API ERROR occurred when trying to update a user in the DB\",\n    \"error\": {\n        \"stringValue\": \"\\\"631e694573fc67e31320\\\"\",\n        \"valueType\": \"string\",\n        \"kind\": \"ObjectId\",\n        \"value\": \"631e694573fc67e31320\",\n        \"path\": \"_id\",\n        \"reason\": {},\n        \"name\": \"CastError\",\n        \"message\": \"Cast to ObjectId failed for value \\\"631e694573fc67e31320\\\" (type string) at path \\\"_id\\\" for model \\\"users\\\"\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a user  ( with UserId )",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/users/631e694573fc67e31320235f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"631e694573fc67e31320235f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/users/631e694573fc67e31320235f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"users",
+										"631e694573fc67e31320235f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23-akGryfcBD/PAC83VPvtYuUxkGUY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:44:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"User deleted successfully\"\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/users/631e694573fc67e313",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"users",
+										"631e694573fc67e313"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "353"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"161-jf7+u2GW8eWq2u6iHqhGfMNv8Is\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:45:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"API ERROR occurred when trying to delete a user in the DB\",\n    \"error\": {\n        \"stringValue\": \"\\\"631e694573fc67e313\\\"\",\n        \"valueType\": \"string\",\n        \"kind\": \"ObjectId\",\n        \"value\": \"631e694573fc67e313\",\n        \"path\": \"userId\",\n        \"reason\": {},\n        \"name\": \"CastError\",\n        \"message\": \"Cast to ObjectId failed for value \\\"631e694573fc67e313\\\" (type string) at path \\\"userId\\\" for model \\\"carts\\\"\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "IMAGES",
+			"item": [
+				{
+					"name": "UploadImage  ( with file)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/D:/Imágenes/Simpsons/[homero.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/file/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"file",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Image  ( with filename)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/file/1662163370615-products-lisaSistema.png",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"file",
+								"1662163370615-products-lisaSistema.png"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CARTS",
+			"item": [
+				{
+					"name": "Get Cart ( with UserId )",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/cart/631ebe44f786552eba1afcfd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"cart",
+								"631ebe44f786552eba1afcfd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/cart/631eb65c585b7f4284692df3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"cart",
+										"631eb65c585b7f4284692df3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "171"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ab-ijcPgcdNbH+SwbNmWbBzNqHuLis\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:45:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"631eb65c585b7f4284692df5\",\n        \"userId\": \"631eb65c585b7f4284692df3\",\n        \"products\": [],\n        \"createdAt\": \"2022-09-12T04:32:28.819Z\",\n        \"updatedAt\": \"2022-09-12T04:32:28.819Z\"\n    }\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/cart/631eb65c585b7f4284",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"cart",
+										"631eb65c585b7f4284"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "314"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13a-NMWTO5CRk/YvvnflGh5D1AseVf8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:46:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Error getting cart\",\n    \"error\": {\n        \"stringValue\": \"\\\"631eb65c585b7f4284\\\"\",\n        \"valueType\": \"string\",\n        \"kind\": \"ObjectId\",\n        \"value\": \"631eb65c585b7f4284\",\n        \"path\": \"userId\",\n        \"reason\": {},\n        \"name\": \"CastError\",\n        \"message\": \"Cast to ObjectId failed for value \\\"631eb65c585b7f4284\\\" (type string) at path \\\"userId\\\" for model \\\"carts\\\"\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add a product  ( with UserId )",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"631e8f89ef0ddc800039d13d\",\r\n    \"amount\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/cart/631ebe44f786552eba1afcfd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"cart",
+								"631ebe44f786552eba1afcfd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productId\":\"631e8f89ef0ddc800039d13d\",\r\n    \"amount\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/cart/631eb65c585b7f4284692df3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"cart",
+										"631eb65c585b7f4284692df3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "256"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"100-9VRG/Fd3Z5jVoHd3AzmCXGjAxNc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:46:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Product added successfully\",\n    \"cart\": {\n        \"_id\": \"631eb65c585b7f4284692df5\",\n        \"userId\": \"631eb65c585b7f4284692df3\",\n        \"products\": [\n            {\n                \"productId\": \"631e8f89ef0ddc800039d13d\",\n                \"items\": 4\n            }\n        ],\n        \"createdAt\": \"2022-09-12T04:32:28.819Z\",\n        \"updatedAt\": \"2022-09-12T04:46:46.205Z\"\n    }\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productId\":\"631e8f89ef0ddc800039d13d\",\r\n    \"amount\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/cart/631eb65c585b7f428469",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"cart",
+										"631eb65c585b7f428469"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "363"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16b-iiYZm3pUJzbtmnD5yZyPg77rOB4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:46:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"API ERROR occurred when trying to add the product to the Cart\",\n    \"error\": {\n        \"stringValue\": \"\\\"631eb65c585b7f428469\\\"\",\n        \"valueType\": \"string\",\n        \"kind\": \"ObjectId\",\n        \"value\": \"631eb65c585b7f428469\",\n        \"path\": \"userId\",\n        \"reason\": {},\n        \"name\": \"CastError\",\n        \"message\": \"Cast to ObjectId failed for value \\\"631eb65c585b7f428469\\\" (type string) at path \\\"userId\\\" for model \\\"carts\\\"\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "remove a product  ( with UserId )",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"631e8f89ef0ddc800039d13d\",\r\n    \"amount\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/cart/631eb65c585b7f4284692df3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"cart",
+								"631eb65c585b7f4284692df3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productId\":\"631e8f89ef0ddc800039d13d\",\r\n    \"amount\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/cart/631eb65c585b7f4284692df3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"cart",
+										"631eb65c585b7f4284692df3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "209"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d1-Q9WCLfTo7bnm2ZlsjNImNDHsfsA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:48:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Product delected successfully\",\n    \"cart\": {\n        \"_id\": \"631eb65c585b7f4284692df5\",\n        \"userId\": \"631eb65c585b7f4284692df3\",\n        \"products\": [],\n        \"createdAt\": \"2022-09-12T04:32:28.819Z\",\n        \"updatedAt\": \"2022-09-12T04:48:05.909Z\"\n    }\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productId\":\"631e8f89ef0ddc800039d13d\",\r\n    \"amount\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/cart/631eb65c585b7f42846",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"cart",
+										"631eb65c585b7f42846"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "365"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16d-EN5ukxkkm4HPC0IOj/rzxo1MIrk\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 04:48:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"API ERROR occurred when trying to delete the product from the Cart\",\n    \"error\": {\n        \"stringValue\": \"\\\"631eb65c585b7f42846\\\"\",\n        \"valueType\": \"string\",\n        \"kind\": \"ObjectId\",\n        \"value\": \"631eb65c585b7f42846\",\n        \"path\": \"userId\",\n        \"reason\": {},\n        \"name\": \"CastError\",\n        \"message\": \"Cast to ObjectId failed for value \\\"631eb65c585b7f42846\\\" (type string) at path \\\"userId\\\" for model \\\"carts\\\"\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "empty cart ( with UserId )",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/cart/empty/631ebe44f786552eba1afcfd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"cart",
+								"empty",
+								"631ebe44f786552eba1afcfd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/cart/empty/631ebe44f786552eba1afcfd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"cart",
+										"empty",
+										"631ebe44f786552eba1afcfd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "193"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c1-DvSTQBPfXe3o0wB7Y0/1VD/7hpo\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 05:08:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Cart is Empty\",\n    \"cart\": {\n        \"_id\": \"631ebe45f786552eba1afcff\",\n        \"userId\": \"631ebe44f786552eba1afcfd\",\n        \"products\": [],\n        \"createdAt\": \"2022-09-12T05:06:13.302Z\",\n        \"updatedAt\": \"2022-09-12T05:08:04.328Z\"\n    }\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/cart/empty/631ebe44f786552eba1a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"cart",
+										"empty",
+										"631ebe44f786552eba1a"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "369"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"171-d9dY85eyCAqqQrZlWctFiuyl1jA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 05:08:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"API ERROR occurred when trying to delete the products from the Cart\",\n    \"error\": {\n        \"stringValue\": \"\\\"631ebe44f786552eba1a\\\"\",\n        \"valueType\": \"string\",\n        \"kind\": \"ObjectId\",\n        \"value\": \"631ebe44f786552eba1a\",\n        \"path\": \"userId\",\n        \"reason\": {},\n        \"name\": \"CastError\",\n        \"message\": \"Cast to ObjectId failed for value \\\"631ebe44f786552eba1a\\\" (type string) at path \\\"userId\\\" for model \\\"carts\\\"\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ORDERS",
+			"item": [
+				{
+					"name": "Get order( with UserId )",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/order/631ebe44f786552eba1afcfd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"order",
+								"631ebe44f786552eba1afcfd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/order/631ebe44f786552eba1afcfd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"order",
+										"631ebe44f786552eba1afcfd"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "262"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"106-iE1ojaQ2conE0Z/eKnw0QNiW+h0\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 05:09:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"631e80e9a37a013bb6b49009\",\n        \"userId\": \"631e37285c91a9ed8c4c7eb4\",\n        \"products\": [\n            {\n                \"productId\": \"631e027278e5541cf40657a8\",\n                \"items\": 4\n            }\n        ],\n        \"orderStatus\": \"generated\",\n        \"orderTotal\": 4,\n        \"createdAt\": \"2022-09-12T00:44:25.602Z\",\n        \"updatedAt\": \"2022-09-12T00:44:25.602Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create an Order ( with UserId )",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/order/631ebe44f786552eba1afcfd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"order",
+								"631ebe44f786552eba1afcfd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/order/631ebe44f786552eba1afcfd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"order",
+										"631ebe44f786552eba1afcfd"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "314"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13a-F1T+iIdJqnMGigWWCtZg2crm1gA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 05:15:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Order created successfully\",\n    \"data\": {\n        \"orderCreated\": {\n            \"userId\": \"631ebe44f786552eba1afcfd\",\n            \"products\": [\n                {\n                    \"productId\": \"631e8f89ef0ddc800039d13d\",\n                    \"items\": 4\n                }\n            ],\n            \"orderStatus\": \"generated\",\n            \"orderTotal\": 4,\n            \"_id\": \"631ec06738395224d418d243\",\n            \"createdAt\": \"2022-09-12T05:15:19.965Z\",\n            \"updatedAt\": \"2022-09-12T05:15:19.965Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Order as Complete ( with OrderId)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderStatus\": \"completed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/order/631ec06738395224d418d243",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"order",
+								"631ec06738395224d418d243"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderStatus\": \"completed\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/order/631ec06738395224d418d243",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"order",
+										"631ec06738395224d418d243"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "297"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"129-/CC9ozLX2DJIhw0Npcp6bSF737s\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Sep 2022 05:15:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Order updated successfully\",\n    \"data\": {\n        \"_id\": \"631ec06738395224d418d243\",\n        \"userId\": \"631ebe44f786552eba1afcfd\",\n        \"products\": [\n            {\n                \"productId\": \"631e8f89ef0ddc800039d13d\",\n                \"items\": 4\n            }\n        ],\n        \"orderStatus\": \"completed\",\n        \"orderTotal\": 4,\n        \"createdAt\": \"2022-09-12T05:15:19.965Z\",\n        \"updatedAt\": \"2022-09-12T05:15:58.883Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
